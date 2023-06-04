@@ -104,15 +104,15 @@ async def private_receive_handler(c: Client, m: Message):
         msg_text ="""
 <b>ʏᴏᴜʀ ʟɪɴᴋ ɪs ɢᴇɴᴇʀᴀᴛᴇᴅ...⚡
 
-<b>📧 ғɪʟᴇ ɴᴀᴍᴇ :- </b> <i><b>{}</b></i>
+<b>📧 FILE NAME :- </b> <i><b>{}</b></i>
 
-<b>📦 ғɪʟᴇ sɪᴢᴇ :- </b> <i><b>{}</b></i>
+<b>📦 FILE SIZE :- </b> <i><b>{}</b></i>
 
-<b>💌 ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ :- </b> <i><b>{}</b></i>
+<b>💌 DOWNLOAD LINK :- </b> <i><b>{}</b></i>
 
 <b>🖥 WATCH ONLINE :- </b> <i><b>{}</b></i>
 
-<b>♻️ ᴛʜɪs ʟɪɴᴋ ɪs ᴘᴇʀᴍᴀɴᴇɴᴛ ᴀɴᴅ ᴡᴏɴ'ᴛ ɢᴇᴛs ᴇxᴘɪʀᴇᴅ ♻️\n\n@Tamil247entertainment</b>"""
+<b>♻️ ᴛʜɪs ʟɪɴᴋ ɪs ᴘᴇʀᴍᴀɴᴇɴᴛ ᴀɴᴅ ᴡᴏɴ'ᴛ ɢᴇᴛs ᴇxᴘɪʀᴇᴅ ♻️\n\n@Tamil247Entertainments</b>"""
 
         await log_msg.reply_text(text=f"**RᴇQᴜᴇꜱᴛᴇᴅ ʙʏ :** [{m.from_user.first_name}](tg://user?id={m.from_user.id})\n**Uꜱᴇʀ ɪᴅ :** `{m.from_user.id}`\n**Stream ʟɪɴᴋ :** {stream_link}", disable_web_page_preview=True, quote=True)
         await m.reply_text(
