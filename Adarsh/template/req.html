@@ -55,70 +55,14 @@
 
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta property="og:image" content="https://cdn.discordapp.com/attachments/1077300617216802890/1114877614042140802/TAMIL_247.png" itemprop="thumbnailUrl">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Watch Vanathai_Pola_S01E757_Jun_06_2023_240p_SNXT_WEB_DL_Tamil_AAC.mkv</title>
-    <link rel="stylesheet" type='text/css' href="https://drive----google.com/uc?export=view&id=1pVLG4gZy7jdow3sO-wFS06aP_A9QX0O6">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Delius">
-    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.9/plyr.css" />
-    
-        									 
-<style>
-      marquee{
-      font-size: 30px;
-      font-weight: 800;
-      color: Black;
-      font-family: serif;
-      }
-    </style>
-    <style>
-      marquee{
-      font-size: 30px;
-      font-weight: 800;
-      color: Black;
-      font-family: serif;
-      }
-    </style>
-</head>
-
-<body>
-	
-    <header>
-        <marquee bgcolor="#808080"
-<div class="toogle"></div>
-        <div id="file-name">
-            Vanathai_Pola_S01E757_Jun_06_2023_240p_SNXT_WEB_DL_Tamil_AAC.mkv
-        </div>
-</marquee>
-    </header>
-
-    <div class="container">
-        <video src="https://tamil247.onrender.com/AgADsA951" class="player"></video>
-    </div>
-
-
-
-
-
-
-
-
-
-
-<center><div id="button-container">
+<div id="button-container">
   <a id="final-link-btn" href="">
     <button>DOWNLOAD</button>
   </a>
   <button id="play-online-btn" onclick="playOnline('vlc')">Play in VLC</button>
   <button id="play-playit-btn" onclick="playOnline('playit')">Play in Playit</button>
   <button id="play-mxplayer-btn" onclick="playOnline('mxplayer')">Play in MX Player</button>
-</div> </center>
+</div>
 
 <script>
   const currentUrl = window.location.href;
@@ -130,15 +74,15 @@
     // Get the final link URL from the "Download Now" button
     const finalLinkUrl = finalUrl;
 
-    // Generate the player-specific URL
+    // Generate the player-specific deep linking URL
     let playerUrl;
 
     if (player === 'vlc') {
       playerUrl = `vlc://${finalLinkUrl}`;
     } else if (player === 'playit') {
-      playerUrl = `playit://${finalLinkUrl}`;
+      playerUrl = 'intent://#Intent;package=com.playit.videoplayer;S.video_url=' + finalLinkUrl + ';end';
     } else if (player === 'mxplayer') {
-      playerUrl = `mxplayer://${finalLinkUrl}`;
+      playerUrl = 'intent://#Intent;package=com.mxtech.videoplayer.ad;S.video_url=' + finalLinkUrl + ';end';
     } else {
       console.error("Invalid player specified.");
       return;
@@ -149,8 +93,6 @@
   }
 </script>
 
-
-<a href="playit://playerv2/video?url=" class="open-btn">Play in Playit </a>
 
 
 
