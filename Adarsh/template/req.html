@@ -58,12 +58,10 @@
   <a id="final-link-btn" href="">
     <button>DOWNLOAD</button>
   </a>
-  
-  <button id="play-online-btn" onclick="playOnline()">Play in VLC</button>
-  
-  <button id="play-online-btn" onclick="playOnline()">Play It</button>
-</div></center>
-
+  <button id="play-online-btn" onclick="playOnline('vlc')">Play in VLC</button>
+  <button id="play-playit-btn" onclick="playOnline('playit')">Play in Playit</button>
+  <button id="play-mxplayer-btn" onclick="playOnline('mxplayer')">Play in MX Player</button>
+</div> </center>
 
 <script>
   const currentUrl = window.location.href;
@@ -71,24 +69,29 @@
   const finalLinkBtn = document.getElementById("final-link-btn");
   finalLinkBtn.setAttribute("href", finalUrl);
 
-  function playOnline() {
+  function playOnline(player) {
     // Get the final link URL from the "Download Now" button
     const finalLinkUrl = finalUrl;
 
-    // Generate the VLC media player URL
-    const vlcUrl = `vlc://${finalLinkUrl}`;
+    // Generate the player-specific URL
+    let playerUrl;
 
-    // Open the VLC media player URL in the browser
-    window.open(vlcUrl, "_blank");
-  }
-  
-      // Generate the Playit media player URL
-    const vlcUrl = `Playit://${finalLinkUrl}`;
+    if (player === 'vlc') {
+      playerUrl = `vlc://${finalLinkUrl}`;
+    } else if (player === 'playit') {
+      playerUrl = `playit://${finalLinkUrl}`;
+    } else if (player === 'mxplayer') {
+      playerUrl = `mxplayer://${finalLinkUrl}`;
+    } else {
+      console.error("Invalid player specified.");
+      return;
+    }
 
-    // Open the VLC media player URL in the browser
-    window.open(vlcUrl, "_blank");
+    // Open the player URL in the browser
+    window.open(playerUrl, "_blank");
   }
 </script>
+
 
 
 
