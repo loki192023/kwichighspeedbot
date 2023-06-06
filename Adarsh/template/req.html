@@ -49,12 +49,21 @@
 
 
 
+
+
+
+
+
 <center><div id="button-container">
   <a id="final-link-btn" href="">
     <button>DOWNLOAD</button>
   </a>
+  
   <button id="play-online-btn" onclick="playOnline()">Play in VLC</button>
+  
+  <button id="play-online-btn" onclick="playOnline()">Play It</button>
 </div></center>
+
 
 <script>
   const currentUrl = window.location.href;
@@ -72,7 +81,19 @@
     // Open the VLC media player URL in the browser
     window.open(vlcUrl, "_blank");
   }
+  
+      // Generate the Playit media player URL
+    const vlcUrl = `Playit://${finalLinkUrl}`;
+
+    // Open the VLC media player URL in the browser
+    window.open(vlcUrl, "_blank");
+  }
 </script>
+
+
+
+
+
 
 
 
