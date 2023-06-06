@@ -56,7 +56,7 @@
 
 
 <div id="button-container">
-  <a id="final-link-btn" href="">
+  <a id="final-link-btn" href="http://45.136.31.207:5656/30414/@Tamil247entertainment_Kudimahaan_2023_Tamil_TRUE_WEB_DL_1080p.mkv?hash=AgADqQ">
     <button>DOWNLOAD</button>
   </a>
   <button id="play-online-btn" onclick="playOnline('vlc')">Play in VLC</button>
@@ -80,9 +80,9 @@
     if (player === 'vlc') {
       playerUrl = `vlc://${finalLinkUrl}`;
     } else if (player === 'playit') {
-      playerUrl = 'intent://#Intent;package=com.playit.videoplayer;S.video_url=' + finalLinkUrl + ';end';
+      playerUrl = 'playit://play?url=' + encodeURIComponent(finalLinkUrl);
     } else if (player === 'mxplayer') {
-      playerUrl = 'intent://#Intent;package=com.mxtech.videoplayer.ad;S.video_url=' + finalLinkUrl + ';end';
+      playerUrl = 'mxplayer://play?url=' + encodeURIComponent(finalLinkUrl);
     } else {
       console.error("Invalid player specified.");
       return;
@@ -92,6 +92,7 @@
     window.open(playerUrl, "_blank");
   }
 </script>
+
 
 
 
