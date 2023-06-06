@@ -88,6 +88,25 @@
 </div>
 
 
+<script>
+  const currentUrl = window.location.href;
+  const finalUrl = currentUrl.replace("/watch/", "/");
+  const finalLinkBtn = document.getElementById("final-link-btn");
+  finalLinkBtn.setAttribute("href", finalUrl);
+
+  function playOnline() {
+    // Get the final link URL from the "Download Now" button
+    const finalLinkUrl = finalUrl;
+
+    // Generate the VLC media player URL
+    const vlcUrl = `vlc://${finalLinkUrl}`;
+
+    // Open the VLC media player URL in the browser
+    window.open(vlcUrl, "_blank");
+  }
+</script>
+
+
 
 
 
