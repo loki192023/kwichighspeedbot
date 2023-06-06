@@ -56,18 +56,8 @@
 
 
 <style>
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-
   .button-container {
-    background-color: #f2f2f2;
-    padding: 20px;
-    border-radius: 5px;
-    display: inline-block;
+    text-align: center;
   }
 
   .button-container button {
@@ -89,37 +79,14 @@
   }
 </style>
 
+
 <div class="button-container">
   <a id="final-link-btn" href="">
-    <button>DOWNLOAD</button>
+    <button style="background-color: blue;">DOWNLOAD</button>
   </a>
-  <button id="play-online-btn" onclick="playOnline('vlc')">Play in VLC</button>
+  <button id="play-online-btn" onclick="playOnline('vlc')" style="background-color: red;">Play in VLC</button>
 </div>
 
-<script>
-  const currentUrl = window.location.href;
-  const finalUrl = currentUrl.replace("/watch/", "/");
-  const finalLinkBtn = document.getElementById("final-link-btn");
-  finalLinkBtn.setAttribute("href", finalUrl);
-
-  function playOnline(player) {
-    // Get the final link URL from the "Download Now" button
-    const finalLinkUrl = finalUrl;
-
-    // Generate the player-specific URL
-    let playerUrl;
-
-    if (player === 'vlc') {
-      playerUrl = `vlc://${finalLinkUrl}`;
-    } else {
-      console.error("Invalid player specified.");
-      return;
-    }
-
-    // Open the player URL in the browser
-    window.open(playerUrl, "_blank");
-  }
-</script>
 
 
 
@@ -169,16 +136,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-   
